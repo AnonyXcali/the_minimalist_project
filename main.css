@@ -1,0 +1,136 @@
+ @import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: 'Lato', sans-serif;
+
+    
+}
+
+
+
+@media only screen and (min-width : 1280px) {
+    .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+    
+    #navbar{
+        display:grid;
+        grid-template-rows:repeat(3,38px);
+        grid-template-columns: repeat(38,38px);
+        //background: red;
+        overflow: hidden;
+    }
+    
+    
+     #logo{
+        
+        grid-row: 3/4;
+        grid-column: 5/12;
+        background: url('assets/logo_white.png') center no-repeat;
+        //background-size : 80%;
+    }
+    
+    #hamMenu{
+        grid-row : 3/4;
+        grid-column: 28/31;
+        background: url('assets/menubar.png') center no-repeat;
+        
+    }
+    
+    #logIn{
+        grid-row:3/4;
+        margin-top: 5px;
+        grid-column: 27/29;
+        font-size : 20px;
+        font-weight: 600px;
+        color:white;
+    }
+    
+    
+    
+    #container1, #container2, #container3{
+        height : 720px;
+    width: 100%; 
+        display: grid;
+    grid-template-rows: repeat(19,38px);
+    grid-template-columns: repeat(38,38px);
+    }    
+    
+    
+#container1{
+    background-color: #e54747 ;
+}
+    
+    #container1 #content1{
+        grid-column: 7/30;
+        grid-row: 7/11;
+        color:#fffefe;
+        font-size: 50px;
+        font-weight: 900;
+        text-align: center;
+    }    
+    
+    #container1 #content2{
+    grid-column: 13/24;
+    grid-row: 14/17;
+    color: #ffffff;    
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    }
+    
+    #container2{
+        background-color: #35ade6;
+    }
+    
+    #container3{
+        background-color:  #37c19a ;
+    }
+    
+    
+    
+   
+    
+}
+
+
+@media only screen and (min-width : 1366px) {
+    .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+    
+    #navbar{
+        display:grid;
+        grid-template-rows:repeat(3,38px);
+        grid-template-columns: repeat(38,38px);
+        //background: red;
+        overflow: hidden;
+    }
+    
+
+    
+    #hamMenu{
+        grid-column: 30/33;     
+    }
+    
+    #logIn{
+       
+        grid-column: 29/31;
+    }
+    
+    
+}
+
+
