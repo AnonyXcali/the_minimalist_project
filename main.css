@@ -14,7 +14,6 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
 }
 
 
-
 @media only screen and (min-width : 1280px) {
     .sticky {
   position: fixed;
@@ -23,39 +22,128 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
 }
     
     #navbar{
+/*
         display:grid;
+        position: fixed;
         grid-template-rows:repeat(3,38px);
-        grid-template-columns: repeat(38,38px);
+       grid-template-columns: repeat(38,38px);
         //background: red;
         overflow: hidden;
+        height:100px;
+        
+*/
+        position: fixed;
+height: 50px;
+display: block;
+width: 100%;
+z-index: 9;
+color: #f2f2f2;
+padding: 20px 0 0 0;
+        
     }
     
     
      #logo{
         
+/*
         grid-row: 3/4;
         grid-column: 5/12;
+*/
+         position: relative;
+         opacity:1;
+         height:80px;
         background: url('assets/logo_white.png') center no-repeat;
+         width:200px;
+         top:45px;
+         left:200px;
         //background-size : 80%;
     }
     
     #hamMenu{
+/*
         grid-row : 3/4;
         grid-column: 28/31;
+*/
+        position: relative;
+        width:38px;
+        height:38px;
         background: url('assets/menubar.png') center no-repeat;
+        bottom:40px;
+        left:1067px;
         
     }
     
     #logIn{
+/*
         grid-row:3/4;
-        margin-top: 5px;
         grid-column: 27/29;
+*/
+        position: relative;
+        width:100px;
+        //margin-top: 5px;
         font-size : 20px;
-        font-weight: 600px;
+        font-weight: 400px;
         color:white;
+        left:999px;
+        top:-10px;
     }
     
     
+    
+    
+    
+    .navbox{
+        height:3px;
+        width:30px;
+        background: #e8e7e3;
+    }
+    
+    #sec1{
+        position: relative;
+        top:160px;
+        width:65px;
+        left:1067;
+    }
+    
+    #sec2{
+        position: relative;
+        left:1067;
+        top:165px;
+    }
+    
+    #sec3{
+        position: relative;
+        left:1067;
+        top:170px
+    }
+    
+    .navbox-active{
+        animation: grow 1s forwards;
+    }
+    
+    .navbox-not-active{
+        animation: defaultX 1s forwards;
+    }
+    
+    @keyframes grow{
+        0%{
+            width:30px;
+        }
+        100%{
+            width:65px;
+        }
+        
+    }
+    
+    @keyframes defaultX{
+        0%{
+            width:65px;
+        }
+        100%{
+            width:30px;
+        }
+        
+    }
     
     #container1, #container2, #container3{
         height : 720px;
@@ -109,6 +197,7 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
     }
     
     #container2 #phoneImage{
+/*        position: absolute;*/
         grid-column: 18/29;
         grid-row:5/5;
         background:url('assets/container2bigPhone.png') center no-repeat;
@@ -256,10 +345,10 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
         grid-row: 16/20;
         grid-column: 20/27;
         background: url('assets/t3.png') center no-repeat;
-        margin-right:10px;
+        margin-right:40px;
     }
     
-    #footer{
+    #section-footer{
         display: grid;
         height:125px;
         width:1280px;
@@ -272,6 +361,136 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
         z-index: 2;
     }
    
+.section-2 > .fp-tableCell #container2 #phoneImage {
+	transform: translateY(-500px);
+	opacity: 0;
+	transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+opacity .8s ease;
+}
+    
+    
+ .section-2.active > .fp-tableCell #container2 #phoneImage {
+	transform: translate(0);
+    opacity: 1;
+}  
+    
+    
+.section-2 > .fp-tableCell #container2 #app1 {
+	transform: translate(200px,1000px);
+	opacity: 0;
+	transition: transform .7s cubic-bezier(0.16, 0.68, 0.43, 0.99) ,
+opacity .8s ease;
+} 
+    .section-2.active > .fp-tableCell #container2 #app1 {
+	transform: translate(0,0);
+    opacity: 1;
+} 
+
+.section-2 > .fp-tableCell #container2 #app3 {
+	transform: translate(200px,1000px);
+	opacity: 0;
+	transition: transform .7s cubic-bezier(0.16, 0.68, 0.43, 0.99) .3s,
+opacity .8s ease;
+} 
+    .section-2.active > .fp-tableCell #container2 #app3 {
+	transform: translate(0,0);
+    opacity: 1;
+}
+
+.section-2 > .fp-tableCell #container2 #app2 {
+	transform: translate(-200px,1000px);
+	opacity: 0;
+	transition: transform .7s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+opacity .8s ease;
+} 
+    .section-2.active > .fp-tableCell #container2 #app2 {
+	transform: translate(0,0);
+    opacity: 1;
+}
+    
+.section-2 > .fp-tableCell #container2 #app4 {
+	transform: translate(-200px,1000px);
+	opacity: 0;
+	transition: transform .7s cubic-bezier(0.16, 0.68, 0.43, 0.99) .3s,
+opacity .8s ease;
+} 
+    .section-2.active > .fp-tableCell #container2 #app4 {
+	transform: translate(0,0);
+    opacity: 1;
+}
+    
+    
+   
+
+.section-3 > .fp-tableCell #container3 #middlePhn {
+	transform: translate(200px,-500px);
+	opacity: 0;
+	transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+opacity .8s;
+}
+    
+    
+ .section-3.active > .fp-tableCell #container3 #middlePhn {
+	transform: translate(-10px,0);
+    opacity: 1;
+}    
+
+    .section-3 > .fp-tableCell #container3 #slantFb{
+        
+        transform: translateX(300px);
+        opacity: 0;
+        transition : transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99) .16s, opacity .8s;
+    }
+
+    .section-3.active > .fp-tableCell #container3 #slantFb{
+        
+       transform: translate(0);
+    opacity: 1;
+    }
+    
+    .section-3 > .fp-tableCell #container3 #slantWhatsapp{
+        
+        transform: translateX(300px);
+        opacity: 0;
+        transition : transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99) .4s , opacity .8s;
+    }
+
+    .section-3.active > .fp-tableCell #container3 #slantWhatsapp{
+        
+       transform: translate(0);
+    opacity: 1;
+    }
+    
+    .section-3 > .fp-tableCell #container3 #slantInsta{
+        
+        transform: translateX(-300px);
+        opacity: 0;
+        transition : transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99) .16s , opacity .8s;
+    }
+
+    .section-3.active > .fp-tableCell #container3 #slantInsta{
+        
+       transform: translate(0);
+    opacity: 1;
+    }
+    
+    
+      .section-3 > .fp-tableCell #container3 #slantTwitter{
+        
+        transform: translateX(-300px);
+        opacity: 0;
+        transition : transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99) .4s , opacity .8s;
+    }
+
+    .section-3.active > .fp-tableCell #container3 #slantTwitter{
+        
+       transform: translate(0);
+    opacity: 1;
+    }
+    
+    /*KeyFrames*/
+    
+ 
     
 }
 

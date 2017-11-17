@@ -912,6 +912,9 @@
                 if(isAtBottom){
                     visibleSectionIndex = sections.length - 1;
                 }
+                
+                
+                
                 //is at top? when using `auto-height` for a small first section it won't be centered in the viewport
                 else if(!currentScroll){
                     visibleSectionIndex = 0;
@@ -1354,6 +1357,70 @@
         * Scrolls the site to the given element and scrolls to the slide if a callback is given.
         */
         function scrollPage(element, callback, isMovementUp){
+            
+            
+            if (!$(".section-2.active")[0]){
+                console.log("sec2 active");
+            $("#sec1").removeClass("navbox-active");
+            $("#sec3").removeClass("navbox-active");
+            $("#sec2").removeClass("navbox-not-active");
+            $("#sec2").addClass("navbox-active");
+            $("#sec1").addClass("navbox-not-active");
+            $("#sec3").addClass("navbox-not-active");
+            
+        
+         } else if($(".s1.active")[0]) {
+            console.log("sec3 active");
+            $("#sec3").removeClass("navbox-active");
+            $("#sec2").removeClass("navbox-active");
+            $("#sec1").removeClass("navbox-not-active");
+            $("#sec1").addClass("navbox-active");
+            $("#sec3").addClass("navbox-not-active");
+            $("#sec2").addClass("navbox-not-active");
+             
+                 
+        }else if(!$(".section-3.active")[0]) {
+        console.log("sec1 active");
+        $("#sec1").removeClass("navbox-active");
+            $("#sec2").removeClass("navbox-active");
+            $("#sec3").removeClass("navbox-not-active");
+            $("#sec3").addClass("navbox-active");
+            $("#sec1").addClass("navbox-not-active");
+            $("#sec2").addClass("navbox-not-active");
+        }
+             
+//            
+//               if ($(".section-1.active")[0]){
+//            console.log("not active");
+//           $("#sec1").removeClass("navbox-active");       $("#sec3").removeClass("navbox-not-active");
+//           $("#sec2").removeClass("navbox-not-active");
+//
+//
+//         } else {
+//          console.log("active active");
+//             $("#sec1").addClass("navbox-active");
+//             $("#sec2").addClass("navbox-not-active");
+//             $("#sec3").addClass("navbox-not-active");      
+//        }
+//          
+//               if ($(".section-3.active")[0]){
+//            console.log("not active");
+//           $("#sec3").removeClass("navbox-active");
+//          $("#sec1").removeClass("navbox-not-active");
+//        $("#sec2").removeClass("navbox-not-active");
+//
+//         } else {
+//          console.log("active active");
+//             $("#sec3").addClass("navbox-active");
+//             $("#sec1").addClass("navbox-not-active");
+//             $("#sec2").addClass("navbox-not-active");      
+//        }
+          
+            
+            
+            
+            
+            
             if(typeof element === 'undefined'){ return; } //there's no element to scroll, leaving the function
 
             var dtop = getDestinationPosition(element);
@@ -1436,6 +1503,20 @@
         * Performs the vertical movement (by CSS3 or by jQuery)
         */
         function performMovement(v){
+            
+            //footerStuff
+            
+            if (v.anchorLink == 'footer')
+				{
+					var footer_a = 50;
+					var footer_h = 50;
+					var translate3d = 'translate3d(0px, -' + (v.dtop - footer_a + footer_h) + 'px, 0px)';
+				}
+				else
+				{
+					var translate3d = 'translate3d(0px, -' + v.dtop + 'px, 0px)';
+				}
+            
             // using CSS3 translate functionality
             if (options.css3 && options.autoScrolling && !options.scrollBar) {
 
@@ -2286,6 +2367,9 @@
         * Scrolls the slider to the given slide destination for the given section
         */
         function scrollSlider(section, slideAnchor){
+            
+            
+            
             if(typeof slideAnchor !== 'undefined'){
                 var slides = section.find(SLIDES_WRAPPER_SEL);
                 var destiny =  getSlideByAnchor(slideAnchor, section);
