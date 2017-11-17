@@ -94,7 +94,7 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
     #container1 #playstore{
         grid-column:13/24;
         grid-row:15/25;
-        margin-left:-23px;
+        margin-left:-26px;
     }
     
     #playstoreImg{
@@ -193,17 +193,84 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
     
     
     #container3 #clctPaymnt{
-        grid-column: 11/23;
+        grid-column: 11/25;
         grid-row:5/9;
         font-family: Lato;
         color:#ffffff;
-        font-size: 18px;/* Approximation due to font substitution */
         font-weight: 400;
         text-align: center;
     }
     
+    #clctPaymnt p:nth-child(1){
+        font-size:50px;
+        font-weight: 300;
+        margin-bottom: 6px;
+    }
+    
+    #clctPaymnt p:nth-child(2) && #clctPaymnt p:nth-child(3) {
+        font-size:18px;
+        font-weight: 400;
+    }
+    
+    #middlePhn{
+        z-index: 1;
+    }
+    #slantFb , #slantTwitter , #slantWhatsapp , #slantInsta{
+        z-index: 0;
+        height:234px;
+    }
     
     
+    #middlePhn{
+        grid-row:9/19;
+        grid-column: 11/25;
+        background: url('assets/c3png.png') center no-repeat;
+        height:539px;
+        margin-right:10px;
+    }
+    
+     #slantInsta{
+        grid-row: 12/12;
+        grid-column: 20/26;
+        background: url('assets/i3.png') center no-repeat;
+         margin-right:10px;
+    }
+    
+    #slantFb{
+        grid-row: 12/12;
+        grid-column: 9/18;
+        background: url('assets/f3.png') center no-repeat;
+        margin-right:10px;
+    }
+    
+    
+    
+    #slantWhatsapp{
+        grid-row: 16/20;
+        grid-column: 9/18;
+        background: url('assets/w3.png') center no-repeat;
+        margin-right:10px;
+    }
+    
+    #slantTwitter{
+        grid-row: 16/20;
+        grid-column: 20/27;
+        background: url('assets/t3.png') center no-repeat;
+        margin-right:10px;
+    }
+    
+    #footer{
+        display: grid;
+        height:125px;
+        width:1280px;
+        
+    }
+    
+    #footerBanner{
+        background: url('assets/rectt.png') center;
+        height:125px;
+        z-index: 2;
+    }
    
     
 }
