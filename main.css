@@ -1072,7 +1072,7 @@ top: 1px;
         font-size: 40px;
         font-weight: 900;
         text-align: center;
-       // margin-left:-60px;
+       margin-left:-5px;
     }    
     
     #container1 #content2{
@@ -1214,5 +1214,31 @@ padding: 20px 0 0 0;
       
     }
    
+    .section-3 > .fp-tableCell #container3 #middlePhn {
+	transform: translate(200px,-500px);
+	opacity: 0;
+	transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+opacity .8s;
+}
+    
+    
+ .section-3.active > .fp-tableCell #container3 #middlePhn {
+	transform: translate(0,0);
+    opacity: 1;
+}    
+
+    .section-2 > .fp-tableCell #container2 #phoneImage {
+	transform: translateY(-500px);
+	opacity: 0;
+	transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+opacity .8s ease;
+}
+    
+    
+ .section-2.active > .fp-tableCell #container2 #phoneImage {
+	transform: translate(0);
+    opacity: 1;
+}  
+    
      
 }
