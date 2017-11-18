@@ -1506,16 +1506,16 @@
             
             //footerStuff
             
-            if (v.anchorLink == 'footer')
-				{
-					var footer_a = 50;
-					var footer_h = 50;
-					var translate3d = 'translate3d(0px, -' + (v.dtop - footer_a + footer_h) + 'px, 0px)';
-				}
-				else
-				{
-					var translate3d = 'translate3d(0px, -' + v.dtop + 'px, 0px)';
-				}
+//            if (v.anchorLink == 'footer')
+//				{
+//					var footer_a = 50;
+//					var footer_h = 50;
+//					var translate3d = 'translate3d(0px, -' + (v.dtop - footer_a + footer_h) + 'px, 0px)';
+//				}
+//				else
+//				{
+//					var translate3d = 'translate3d(0px, -' + v.dtop + 'px, 0px)';
+//				}
             
             // using CSS3 translate functionality
             if (options.css3 && options.autoScrolling && !options.scrollBar) {
